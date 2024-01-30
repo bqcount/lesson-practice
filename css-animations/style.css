@@ -1,0 +1,30 @@
+.box {
+    width: 100px;
+    height: 100px;
+    transition: 1.5s;
+    display: inline-block;
+}
+
+.red {
+    background-color: red;
+}
+
+.red:hover {
+    scale: 0.8;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.blue:hover {
+    translate: 0 50px;
+}
+
+.green {
+    background-color: green;
+}
+
+.green:hover {
+    rotate: 45deg;
+}

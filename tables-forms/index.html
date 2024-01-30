@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables and Forms</title>
+</head>
+
+<body>
+
+    <form>
+        <h1>Customer Information</h1>
+        <label for="email">Customer Email:</label>
+        <input type="email" placeholder="ejemplo@gmail.com">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" placeholder="sin caracteres especiales">
+    </form>
+
+    <table border="1" style="margin-top: 20px;" cellspacing="0">
+        <caption></caption>
+        <thead>
+            <tr>
+                <th colspan="6">Time table</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="6">Hours</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>Maths</td>
+                <td>Science</td>
+                <td>Maths</td>
+                <td>Arts</td>
+            </tr>
+            <tr>
+                <td>Social</td>
+                <td>History</td>
+                <td>English</td>
+                <td>Social</td>
+                <td>Sports</td>
+            </tr>
+            <tr>
+                <th colspan="5">Lunch</th>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>Maths</td>
+                <td>Science</td>
+                <td>Maths</td>
+                <td rowspan="2">Project</td>
+            </tr>
+            <tr>
+                <td>Social</td>
+                <td>History</td>
+                <td>English</td>
+                <td>Social</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <!-- <td>Data of the students of FULP 2024</td> -->
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

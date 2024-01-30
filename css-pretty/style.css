@@ -1,0 +1,20 @@
+ul #container{
+    background-color: grey;
+    border: 2px solid red;
+    width: 12%;
+}
+
+ul button{
+    color: red;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+ul .selected{
+    color: blue;
+}
+
+ul .selected + li{
+    background-color: yellow;
+}
