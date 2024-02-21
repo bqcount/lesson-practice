@@ -1,0 +1,26 @@
+{
+    "songs": [
+        {
+            "id": 1,
+            "title": "Macarena",
+            "duration": "3m20s",
+            "artistId": 1
+        },
+        {
+            "id": 2,
+            "title": "Sandman",
+            "duration": "4m10s",
+            "artistId": 2
+        }
+    ],
+    "artists": [
+        {
+            "id": 1,
+            "name": "Los del río"
+        },
+        {
+            "id": 2,
+            "name": "Metallica"
+        }
+    ]
+}

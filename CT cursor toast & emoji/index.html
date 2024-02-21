@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-image: url("images/Fondos/Fondo\ predeterminado8.jpeg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        div{
+            position: absolute;
+            width: 50px;
+            height: 25px;
+            z-index: 1000;
+            visibility: hidden;
+            background-color: lightcoral;
+        }
+
+        /* img {
+            width: 96%;
+            text-align: center;
+            margin: 0 auto;
+        } */
+    </style>
+    <script defer>
+        window.addEventListener("click", mensaje)
+
+        function mensaje(e){
+            const div = document.createElement("div")
+            const body = document.querySelector("body")
+            body.appendChild(div)
+            div.style.top = e.clientY + "px"
+            div.style.left = e.clientX + 30 + "px"
+            setTimeout(() => div.style.visibility = "visible", 500)
+            setTimeout(() =>  {
+                // div.style.visibility = "hidden"
+                body.removeChild(div)
+            }, 1800)
+        }
+
+    </script>
+</head>
+
+<body>
+    <p>🤘</p>
+    <p>&#129304;</p>
+    <p>&#x1F918;</p>
+
+    <!-- <img src="iloveimg-resized/Fondo predeterminado1.jpeg" alt="" srcset="" > -->
+</body>
+
+</html>
