@@ -38,19 +38,19 @@ async function checkDB() {
     }
 }
 
-checkDB().then(async ()=>{
+checkDB().then(async () => {
     //UserModel.createUser()
     /* UserModel.create({ firstName: 'Iratze', age: '12' }, {
         fields: ['firstName'],
         validate: false
     }) */
-	const users = await UserModel.findAll({
+    const users = await UserModel.findAll({
         /*
         where: {
-            [Op.like]:[
-                {firstname: 'Iratze'}
-            ]
-        },
+            firstname: {
+                [Op.like]: 'Iratze'
+            },
+        }
         */
         where: {
             firstname: 'Iratze'
@@ -58,10 +58,10 @@ checkDB().then(async ()=>{
         limit: 10,
         offset: 0
     })
-    const [{dataValues}] = await users
+    const [{ dataValues }] = await users
     //await console.log(users[0].dataValues)
     await console.log(dataValues)
     //.then((newUser) => {
-	//	console.log(newUser)
-	//})
+    //	console.log(newUser)
+    //})
 })
