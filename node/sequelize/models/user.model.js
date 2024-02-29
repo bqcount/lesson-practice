@@ -14,20 +14,27 @@ const UserModel = sequelize.define('user', {
             max: 100 // Validation
         }
     }
-    //,
-    //email: {
-     //   type: DataTypes.STRING,
-        //allowNull: false,
-      //  unique: true
-   // }
-})
+    ,
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true
+    },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            min: 8
+        }
+    }
+}, {timestamps: false})
 
 async function createUser() {
-	const newUser = await UserModel.create({ firstName: 'Iratze', age: '12' }, {
-		fields: ['firstName'], // Only insert the 'firstName' value
-		validate: false        // Don't run Sequelize validations
-	})
-	console.log(newUser)
+    const newUser = await UserModel.create({ firstName: 'Iratze', age: '12' }, {
+        fields: ['firstName'], // Only insert the 'firstName' value
+        validate: false        // Don't run Sequelize validations
+    })
+    console.log(newUser)
 }
 
 module.exports = UserModel, createUser // Export the model definition so it can be used in other files

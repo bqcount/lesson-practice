@@ -22,36 +22,44 @@ connection.query(query, (err, results, fields) => {
 */
 
 require('dotenv').config()
+const express = require('express')
+const app = express()
 const sequelize = require('./db/connection.js')
 const dbSync = require('./db/sync.js')
-const UserModel = require('./models/user.model.js')
 const { Op } = require('sequelize')
+
+const router = require('./routes/index.js')
+const createRelationship = require('./db/relationships.js')
+app.use(express.json())
+
+app.use('/api', router)
 
 async function checkDB() {
     try {
         await sequelize.authenticate()
         console.log('Connection succesful', sequelize.getDatabaseName())
-        await dbSync()
+        createRelationship()
+       // await dbSync()
         //sequelize.close()
     } catch (err) {
         console.error(err)
     }
 }
-
+/* 
 checkDB().then(async () => {
     //UserModel.createUser()
-    /* UserModel.create({ firstName: 'Iratze', age: '12' }, {
-        fields: ['firstName'],
-        validate: false
-    }) */
+    //  UserModel.create({ firstName: 'Iratze', age: '12' }, {
+    //     fields: ['firstName'],
+    //     validate: false
+    // }) 
     const users = await UserModel.findAll({
-        /*
-        where: {
-            firstname: {
-                [Op.like]: 'Iratze'
-            },
-        }
-        */
+        // 
+        // where: {
+        //     firstname: {
+        //         [Op.like]: 'Iratze'
+        //     },
+        // }
+        // 
         where: {
             firstname: 'Iratze'
         },
@@ -64,4 +72,21 @@ checkDB().then(async () => {
     //.then((newUser) => {
     //	console.log(newUser)
     //})
+})
+ */
+
+
+
+app.listen(3000, async (err)=>{
+    try {
+        if(err) throw new Error(err)
+    
+        console.log('*'.repeat(24))
+        console.log('API running on port 3000')
+        console.log('*'.repeat(24))
+        await checkDB()
+        
+    } catch (error) {
+        throw new Error(err)
+    }
 })
