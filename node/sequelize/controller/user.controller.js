@@ -30,7 +30,7 @@ const rateMovie = async (req, res) => {
     try {
         const user = await UserModel.findByPk(req.params.userId)
         const movie = await MovieModel.findByPk(req.params.movieId)
-        await user.addMovie(movie), {through: { rating: req.body.rating }}
+        await user.addMovie({movie, through: { rating: req.body.rating }})
         res.status(200).send("Movie added")
 
     } catch (err) {

@@ -10,7 +10,7 @@ const signup = async (req, res) => {
         const user = await UserModel.create(req.body)
         const token = jwt.sign({
             email: user.email
-        }, process.env.JWT_SECRET, { expiresIn: '7d' })
+        }, process.env.JWT_SECRET)
         res.status(200).json({ token: token })
     } catch (err) {
         console.error(err)
