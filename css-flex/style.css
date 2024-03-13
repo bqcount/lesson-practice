@@ -1,0 +1,64 @@
+:root {
+    color-scheme: dark; /* Modo oscuro */
+    --color-primary: lightgreen; /* Variable */
+}
+
+/* div {
+    width: 250px;
+    height: 250px;
+    border: 1px solid white;
+    /* background-color: lightgreen; */
+    /* background-color: var(--color-primary); *//* Usar variable */
+/* } */
+
+#container{
+    display: flex;
+    /* height: 100vh; */
+    width: 200px;
+    border: 1px solid red;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.element{
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    text-align: center;
+    line-height: 100px;/* Centrar el texto */
+    font-size: large;
+    flex-grow: 2;
+}
+
+
+
+
+/* div {
+    width: 250px;
+    height: 250px;
+    border: 1px solid white;
+    /* background-color: lightgreen; */
+    /* background-color: var(--color-primary); *//* Usar variable */
+/* } */
+
+/* 
+@media(max-width: 599px) {
+    .small{
+        background-color: aqua;
+        display: none;
+    }
+  }
+  
+  @media(min-width: 600px) and (max-width: 999px) {
+    .medium {
+      width: 400px;
+    }
+  }
+  
+  @media(min-width: 1000px) {
+    .large {
+      background-color: blue;
+    }
+  } */
