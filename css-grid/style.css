@@ -1,0 +1,82 @@
+:root {
+    color-scheme: dark;
+}
+
+/* .container{
+    width: 100%;
+    display: grid;
+    /* grid-template-rows: 100px 100px 100px 100px; */
+/* grid-template-columns: repeat(4, minmax(100px, 1fr)); */
+/* } */
+
+span {
+    border: 1px solid;
+    /* height: 50px; */
+}
+
+/*
+.large_item {
+    /* grid-row: 1 / 3; */
+    /* grid-column: 1 / 3; */
+/*} */
+
+
+/* 6 columnas, del mismo tamaño, excepto la tercera columna que ocupe el triple */
+/* .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) minmax(100px,3fr) repeat(3, 1fr);
+} */
+
+
+/* .container{
+    width: 100%;
+    display: grid;
+    grid-template-areas: "a b b";
+}
+
+.a{
+    grid-area: a;
+    background-color: lightcoral;
+    height: 400px;
+}
+
+.b{
+    grid-area: b;
+    background-color: olivedrab;
+    height: 300px;
+
+} */
+
+
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-areas: "header header header aside"
+                         "main main main aside"
+                         "footer footer footer footer";
+    gap: 20px 10px;
+}
+
+.a{
+    grid-area: header;
+    background-color: lightcoral;
+    height: 400px;
+}
+
+.b{
+    grid-area: main;
+    background-color: olivedrab;
+    height: 300px;
+
+}
+
+.c{
+    grid-area: aside;
+    background-color: lightseagreen;
+}
+
+.d{
+    grid-area: footer;
+    background-color: lightpink;
+}
