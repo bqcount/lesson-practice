@@ -1,0 +1,10 @@
+.article-heading{
+    display: flex;
+    gap: 10px;
+  }
+  
+  
+  .article-heading-footer{
+    display: flex;
+    justify-content: space-between;
+  }
