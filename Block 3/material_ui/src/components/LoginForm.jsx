@@ -3,7 +3,7 @@ import {
   CardContent,
   CardHeader,
   CardActions,
-//   Typography,
+  Typography,
   TextField,
   Button,
   InputAdornment,
@@ -17,14 +17,21 @@ import {
   VisibilityOffOutlined,
   VisibilityOutlined,
 } from "@mui/icons-material"
-import { grey } from "@mui/material/colors"
+import { grey, green, teal } from "@mui/material/colors"
 import { useState } from "react"
+
+
 
 function LoginForm() {
   const [isPassVisible, setIsPassVisible] = useState(false)
+//backgroundColor: "#E5F6EC"
+//backgroundColor: "#E5F6EC"
+//backgroundColor: "#E5F6EC"
+
 
   return (
-    <Card sx={{ maxWidth: "700px", backgroundColor: grey[300] }} raised={true}>
+    <Card sx={{ maxWidth: "700px",
+      }} raised={true}>
       <CardHeader title="Login" />
       <CardContent>
         <TextField
@@ -75,20 +82,32 @@ function LoginForm() {
             ),
           }}
         ></TextField>
-        {/* <Typography component="div" variant="h1">
+        <Typography sx={{ color: teal[800] }} component="div" variant="h1">
           Mi tarjeta
         </Typography>
-        <Typography variant="h1">Mi tarjeta</Typography>
-        <Typography component="span">Mi tarjeta</Typography> */}
+        <Typography sx={{ color: grey[800] }} variant="h1">Mi tarjeta</Typography>
+        <Typography sx={{ color: grey[800] }} component="span">Mi tarjeta</Typography>
       </CardContent>
       <CardActions
         sx={{ display: "flex", justifyContent: "end", padding: "15px" }}
       >
-        <Button size="small" color="secondary" variant="contained">
+        {/* <Button size="small" color="secondary" variant="contained">
           Register
         </Button>
         <Button size="small" color="primary" variant="contained">
           Login
+        </Button> */}
+        <Button size="small" color="primary" variant="text">
+          AZUL
+        </Button>
+        <Button size="small" color="error" variant="outlined">
+          ROJO
+        </Button>
+        <Button size="small" color="warning" variant="">
+          NARANJA
+        </Button>
+        <Button size="small" color="success" variant="contained">
+          VERDE
         </Button>
       </CardActions>
     </Card>
