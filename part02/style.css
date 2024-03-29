@@ -207,7 +207,7 @@ button:focus {
 .info .text {
   position: relative;
   font-family: "Montserrat";
-  font-size: calc(var(--card-width) * var(--text-size-offset, 0.2));
+  font-size: calc(var(--card-width) * var(--text-size-offset, 0.05));
   white-space: nowrap;
   color: #fff;
   width: fit-content;
@@ -221,7 +221,7 @@ button:focus {
 }
 .info .location {
   --mg-left: 40px;
-  --text-size-offset: 0.12;
+  --text-size-offset: 0.10;
   font-weight: 600;
   margin-left: var(--mg-left);
   margin-bottom: calc(var(--mg-left) / 2);
@@ -294,26 +294,9 @@ button:focus {
   transform-origin: left;
 }
 @media only screen and (min-width: 800px) {
-  /*TODO: Probar --card-width con unidades relativas*/
+  /*TODO: Probar --card-width tamaños*/
   :root {
-    --card-width: 250px;
-    --card-height: 400px;
+    --card-width: 350px;
+    --card-height: 300px;
   }
-}
-.support {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  padding: 10px;
-  display: flex;
-}
-.support a {
-  margin: 0 10px;
-  color: #fff;
-  font-size: 1.8rem;
-  backface-visibility: hidden;
-  transition: all 150ms ease;
-}
-.support a:hover {
-  transform: scale(1.1);
 }

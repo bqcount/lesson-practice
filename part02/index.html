@@ -4,12 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js" defer></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js" defer></script>
+    <script src="index.js" defer></script>
     <title>Document</title>
   </head>
   <body>
@@ -27,6 +25,12 @@
           <div class="card current--card">
             <div class="card__image">
               <img src="https://source.unsplash.com/Z8dtTatMVMw" alt="" />
+            </div>
+          </div>
+
+          <div class="card next--card">
+            <div class="card__image">
+              <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="" />
             </div>
           </div>
 
@@ -62,6 +66,12 @@
 
           <div class="info next--info">
             <h1 class="text name">Machu Pichu</h1>
+            <h4 class="text location">Peru</h4>
+            <p class="text description">Adventure is never far away</p>
+          </div>
+
+          <div class="info next--info">
+            <h1 class="text name">Machu2 Pichu</h1>
             <h4 class="text location">Peru</h4>
             <p class="text description">Adventure is never far away</p>
           </div>
@@ -107,7 +117,7 @@
             stroke: #fff;
             stroke-linecap: round;
             stroke-linejoin: round;
-            stroke-width: 48px;
+            stroke-width: 80px;
           "
         />
       </symbol>
@@ -123,22 +133,11 @@
             stroke: #fff;
             stroke-linecap: round;
             stroke-linejoin: round;
-            stroke-width: 48px;
+            stroke-width: 80px;
           "
         />
       </symbol>
     </svg>
-
-    <div class="support">
-      <a href="https://twitter.com/DevLoop01" target="_blank"
-        ><i class="fab fa-twitter-square"></i
-      ></a>
-      <a href="https://dribbble.com/devloop01" target="_blank"
-        ><i class="fab fa-dribbble"></i
-      ></a>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-    <script src="index.js"></script>
+   
   </body>
 </html>
