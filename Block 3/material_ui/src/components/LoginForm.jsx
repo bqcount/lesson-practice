@@ -3,7 +3,7 @@ import {
   CardContent,
   CardHeader,
   CardActions,
-  Typography,
+  // Typography,
   TextField,
   Button,
   InputAdornment,
@@ -17,7 +17,7 @@ import {
   VisibilityOffOutlined,
   VisibilityOutlined,
 } from "@mui/icons-material"
-import { grey, green, teal } from "@mui/material/colors"
+// import { grey, green, teal } from "@mui/material/colors"
 import { useState } from "react"
 
 
@@ -43,7 +43,7 @@ function LoginForm() {
           fullWidth={true}
           InputProps={{
             startAdornment: (
-              <InputAdornment>
+              <InputAdornment position="start">
                 <Icon >
                   <EmailOutlined />
                 </Icon>
@@ -59,14 +59,14 @@ function LoginForm() {
           fullWidth={true}
           InputProps={{
             startAdornment: (
-              <InputAdornment>
+              <InputAdornment position="start">
                 <Icon>
                   <LockOutlined />
                 </Icon>
               </InputAdornment>
             ),
             endAdornment: (
-              <InputAdornment>
+              <InputAdornment position="end">
                 <IconButton
                   onClick={() => {
                     setIsPassVisible((oldState) => !oldState)
@@ -82,22 +82,25 @@ function LoginForm() {
             ),
           }}
         ></TextField>
-        <Typography sx={{ color: teal[800] }} component="div" variant="h1">
+        {/* <Typography sx={{ color: teal[800] }} component="div" variant="h1">
           Mi tarjeta
         </Typography>
         <Typography sx={{ color: grey[800] }} variant="h1">Mi tarjeta</Typography>
-        <Typography sx={{ color: grey[800] }} component="span">Mi tarjeta</Typography>
+        <Typography sx={{ color: grey[800] }} component="span">Mi tarjeta</Typography> */}
       </CardContent>
       <CardActions
         sx={{ display: "flex", justifyContent: "end", padding: "15px" }}
       >
-        {/* <Button size="small" color="secondary" variant="contained">
+        <Button size="small" color="secondary" variant="contained">
           Register
         </Button>
         <Button size="small" color="primary" variant="contained">
           Login
-        </Button> */}
-        <Button size="small" color="primary" variant="text">
+        </Button>
+        <Button size="small" color="info" variant="contained">
+          Info
+        </Button>
+        {/* <Button size="small" color="primary" variant="text">
           AZUL
         </Button>
         <Button size="small" color="error" variant="outlined">
@@ -108,7 +111,7 @@ function LoginForm() {
         </Button>
         <Button size="small" color="success" variant="contained">
           VERDE
-        </Button>
+        </Button> */}
       </CardActions>
     </Card>
   )
