@@ -19,15 +19,24 @@ import {
 } from "@mui/icons-material"
 // import { grey, green, teal } from "@mui/material/colors"
 import { useState } from "react"
+import { loginLudohana } from "../services/login"
 
 
 
 function LoginForm() {
   const [isPassVisible, setIsPassVisible] = useState(false)
-//backgroundColor: "#E5F6EC"
-//backgroundColor: "#E5F6EC"
-//backgroundColor: "#E5F6EC"
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
+//backgroundColor: "#E5F6EC"
+async function onLogin() {
+  try {
+    const loginResponse = await loginLudohana({email, password})
+   //Do something with the response
+  } catch (error) {
+   //Handle the error
+  }
+}
 
   return (
     <Card sx={{ maxWidth: "700px",
@@ -36,10 +45,12 @@ function LoginForm() {
       <CardContent>
         <TextField
           label="Email"
+          onChange={(e) => setEmail(e.target.value)}
           //   variant="filled"
           // variant="outlined" predeterminada
           margin="normal"
           type="email"
+          value={"diego@gmail.com"}
           fullWidth={true}
           InputProps={{
             startAdornment: (
@@ -53,6 +64,8 @@ function LoginForm() {
         ></TextField>
         <TextField
           label="Password"
+          value={"1234"}
+          onChange={(e) => setPassword(e.target.value)}
           variant="outlined"
           type={isPassVisible ? "text" : "password"}
           margin="normal"
@@ -94,12 +107,12 @@ function LoginForm() {
         <Button size="small" color="secondary" variant="contained">
           Register
         </Button>
-        <Button size="small" color="primary" variant="contained">
+        <Button onClick={() => onLogin()} size="small" color="primary" variant="contained">
           Login
         </Button>
-        <Button size="small" color="info" variant="contained">
+        {/* <Button size="small" color="info" variant="contained">
           Info
-        </Button>
+        </Button> */}
         {/* <Button size="small" color="primary" variant="text">
           AZUL
         </Button>

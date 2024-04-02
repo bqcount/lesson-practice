@@ -9,6 +9,8 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { useMemo, useState } from "react";
 import { ColorModeContext } from "./context/theme.js";
 import ToggleButton from "./components/ToggleButton.jsx";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router/router.jsx";
 
 function App() {
   const [mode, setMode] = useState("dark");
@@ -29,6 +31,7 @@ function App() {
 
   return (
     <>
+    <RouterProvider router={router}/>
       <ColorModeContext.Provider value={toggleColorMode}>
         <ThemeProvider theme={theme}>
           <CssBaseline />
